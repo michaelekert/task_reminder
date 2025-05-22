@@ -1,0 +1,4 @@
+<h1>Meeting reminder</h1>
+<p><strong><%= @task.title %></strong></p>
+<p><%= @task.description %></p>
+<p>Meeting at: <%= l(@task.meeting_at, format: :long) %></p>

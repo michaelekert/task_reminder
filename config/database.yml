@@ -21,12 +21,13 @@ default: &default
 
 
 development:
-  <<: *default
-  database: task_reminder_development
+  primary:
+    <<: *default
+    database: task_reminder_development
 
   queue:
     <<: *default
-    database: task_reminder_development_queue
+    database: db/task_reminder_development_queue
     migrations_paths: db/queue_migrate
 
   # The specified database role being used to connect to PostgreSQL.

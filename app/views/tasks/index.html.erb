@@ -1,0 +1,11 @@
+<h1>Meetings</h1>
+
+<%= link_to "Add new", new_task_path %>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <strong><%= task.title %></strong> – <%= l(task.meeting_at, format: :long) %> – <%= task.email %>
+    </li>
+  <% end %>
+</ul>

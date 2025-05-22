@@ -1,0 +1,17 @@
+<h1>New meeting</h1>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label :title, "title" %><br>
+  <%= f.text_field :title %><br>
+
+  <%= f.label :description, "Description" %><br>
+  <%= f.text_area :description %><br>
+
+  <%= f.label :meeting_at, "Date meeting" %><br>
+  <%= f.datetime_local_field :meeting_at %><br>
+
+  <%= f.label :email, "Your e-mail" %><br>
+  <%= f.email_field :email %><br>
+
+  <%= f.submit "Save" %>
+<% end %>
